@@ -1,0 +1,21 @@
+下载 caffe_residual之后,
+第一步: 编译代码, 在 caffe_residual 目录下 执行
+	make all
+
+第二步: 下载何凯明pre_training的 deep residual的模型放到目录caffe_residual/examples/dream/下, 下载地址(下载ResNet-50-model.caffemodel):
+	https://onedrive.live.com/?authkey=%21AAFW2-FVoxeVRck&id=4006CBB8476FF777%2117887&cid=4006CBB8476FF777
+
+第三步: 开始训练, 在目录caffe_residual/examples/dream/下执行:
+	bash start_training.sh
+
+
+
+注意, 开始训练前, 需要修改几个目录: 
+1. 需要修改 caffe_residual/examples/dream/net/ResNet-50-softmax.prototxt(我们自己的网络) 文件里面指定训练图片和training.txt的目录:
+	root_folder: "/home/qichen/caffe_residual/examples/dream/data/training_image/"
+    	source: "/home/qichen/caffe_residual/examples/dream/data/training_image/training.txt"
+
+2. 需要修改 /home/qichen/caffe_residual/examples/dream/net/solver.prototxt里面指定 我们的网络文件所在位置的目录:
+	net: "/home/qichen/caffe_residual/examples/dream/net/ResNet-50-softmax.prototxt"
+
+      改成你自己的目录
