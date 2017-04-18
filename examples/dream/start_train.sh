@@ -7,7 +7,7 @@ WEIGHTS=$DIR/examples/dream/ResNet-50-model.caffemodel
 
 VIEW=$DIR/examples/dream/model_png
 rm -rf $VIEW/*
-python $DIR/python/draw_net.py $NET $VIEW/.png --rankdir=LR
+python $DIR/python/draw_net.py $NET $VIEW/model.png --rankdir=LR
 
 $DIR/build/tools/caffe train -solver $SOLVER -weights $WEIGHTS
 
