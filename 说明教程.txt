@@ -9,7 +9,6 @@
 	bash start_training.sh
 
 
-
 注意, 开始训练前, 需要修改几个目录: 
 1. 需要修改 caffe_residual/examples/dream/net/ResNet-50-softmax.prototxt(我们自己的网络) 文件里面指定训练图片和training.txt的目录:
 	root_folder: "/home/qichen/caffe_residual/examples/dream/data/training_image/"
