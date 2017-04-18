@@ -8,7 +8,7 @@ layer {
   image_data_param {
     root_folder: "/home/qichen/caffe_residual/examples/dream/data/training_image/"
     source: "/home/qichen/caffe_residual/examples/dream/data/training_image/training.txt"
-    batch_size: 8
+    batch_size: 1
     shuffle: true
     ignore_label:255 
     new_width: 250
@@ -30,9 +30,9 @@ layer {
   top: "data"
   top: "label"
   image_data_param {
-    root_folder: "/home/qichen/caffe_residual/examples/dream/data/training_image/"
-    source: "/home/qichen/caffe_residual/examples/dream/data/training_image/training.txt"
-    batch_size: 8
+    root_folder: "/home/qichen/caffe_residual/examples/dream/data/testing_image/"
+    source: "/home/qichen/caffe_residual/examples/dream/data/testing_image/testing.txt"
+    batch_size: 1
     shuffle: true
     ignore_label:255
     new_width: 250
