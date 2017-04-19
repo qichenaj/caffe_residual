@@ -8,17 +8,17 @@ layer {
   image_data_param {
     root_folder: "/home/qichen/caffe_residual/examples/dream/data/training_image/"
     source: "/home/qichen/caffe_residual/examples/dream/data/training_image/training.txt"
-    batch_size: 1
+    batch_size: 8
     shuffle: true
     ignore_label:255 
     new_width: 250
     new_height: 250
   }
   transform_param {
-    mean_value: 135
-    mean_value: 149
-    mean_value: 182
-    crop_size: 224
+    mean_value: 30.5394
+    mean_value: 30.5394
+    mean_value: 30.5394
+    #crop_size: 224
     mirror: true
   }
   include: { phase: TRAIN }
@@ -32,17 +32,17 @@ layer {
   image_data_param {
     root_folder: "/home/qichen/caffe_residual/examples/dream/data/testing_image/"
     source: "/home/qichen/caffe_residual/examples/dream/data/testing_image/testing.txt"
-    batch_size: 1
+    batch_size: 8
     shuffle: true
     ignore_label:255
     new_width: 250
     new_height: 250
   }
   transform_param {
-    mean_value: 135
-    mean_value: 149
-    mean_value: 182
-    crop_size: 224
+    mean_value: 30.5394
+    mean_value: 30.5394
+    mean_value: 30.5394
+    #crop_size: 224
     mirror: true
   }
   include: { phase: TEST }
